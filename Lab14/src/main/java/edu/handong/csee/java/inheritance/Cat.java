@@ -15,12 +15,12 @@ public class Cat extends Animal{
 		Cat myCat = new Cat(); //polymorphism
 		myCat.testClassMethod(); // hiding
 		myCat.testInstanceMethod(); // overriding
-		System.out.println(myCat.name); // hiding
+		System.out.println(myCat.name); // Class Cat's field 'name'
 		
 		Animal myAnimal = myCat; //polymorphism
 		myAnimal.testClassMethod(); // hiding
 		myAnimal.testInstanceMethod(); // overriding
-		System.out.println(myAnimal.name); // hiding
+		System.out.println(myAnimal.name); //  Class Animal's field 'name'
 		
 		Animal myAnimal2 = new Dog(); //polymorphism
 		myAnimal2.testClassMethod(); // hiding
@@ -32,6 +32,9 @@ public class Cat extends Animal{
 		 * testInstanceMethod는 instance method이기 때문에 superclass를 override한다
 		 * >> 항상 subclass를 따른다
 		 * instantiation에서 subclass는 subclass타입이면서 superclass타입이기도 하다 - polymorphism
+		 * 
+		 * superclass와 같은 field name을 가진 subclass의 field가 선언된다면, 그냥 새로운 필드가 생성된다
+		 * hiding/overriding/polymorphism 셋 다 아니고 그냥 각자 클래스의 필드이다
 		 */
 	}
 
